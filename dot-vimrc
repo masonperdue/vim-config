@@ -1,0 +1,77 @@
+syntax on
+filetype plugin indent on
+
+set termguicolors
+set clipboard=unnamedplus
+set completeopt=menu,menuone,noselect
+set mouse=a
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+set number
+set relativenumber
+set splitbelow
+set splitright
+set noshowmode
+
+set incsearch
+set nohlsearch
+set ignorecase
+set smartcase
+
+set cursorline
+
+set background=dark
+hi clear
+if exists("syntax_on")
+    syntax reset
+endif
+
+hi Normal         guifg=#c9d1d9 guibg=NONE cterm=NONE
+hi LineNr         guifg=#484f58 guibg=NONE cterm=NONE
+hi CursorLine     guibg=#161b22 gui=NONE cterm=NONE
+hi CursorLineNr   guifg=#f0f6fc gui=bold cterm=bold
+hi Visual         guibg=#1f6feb
+hi Search         guifg=#0d1117 guibg=#e3b341
+hi VertSplit      guifg=#30363d guibg=NONE cterm=NONE
+hi EndOfBuffer    guifg=#79c0ff
+hi StatusLine     guifg=#c9d1d9 guibg=#161b22 gui=none cterm=none
+hi StatusLineNC   guifg=#8b949e guibg=#0d1117 gui=none cterm=none
+
+hi Comment        guifg=#8b949e gui=italic cterm=italic
+hi Constant       guifg=#79c0ff
+hi String         guifg=#a5d6ff
+hi Character      guifg=#a5d6ff
+hi Number         guifg=#79c0ff
+hi Boolean        guifg=#79c0ff
+hi Float          guifg=#79c0ff
+
+hi Identifier     guifg=#ffa657
+hi Function       guifg=#d2a8ff
+hi Statement      guifg=#ff7b72
+hi Conditional    guifg=#ff7b72
+hi Repeat         guifg=#ff7b72
+hi Operator       guifg=#79c0ff
+
+hi PreProc        guifg=#ff7b72
+hi Type           guifg=#ff7b72
+hi Special        guifg=#79c0ff
+hi Underlined     gui=underline cterm=underline
+hi Error          guifg=#f85149 guibg=NONE cterm=NONE
+
+hi htmlTagName    guifg=#7ee787
+hi htmlTag        guifg=#c9d1d9
+hi htmlArg        guifg=#79c0ff
+hi javaScript     guifg=#c9d1d9
+
+set laststatus=2
+set statusline=%F\ %m\ %r%=%y\ %l:%c\ %p%%
+hi StatusLine     guifg=#c9d1d9 guibg=#161b22 gui=none
+hi StatusLineNC   guifg=#8b949e guibg=#0d1117 gui=none
+
+let &t_EI = "\e[1 q"
+let &t_SI = "\e[5 q"
+let &t_SR = "\e[3 q"
